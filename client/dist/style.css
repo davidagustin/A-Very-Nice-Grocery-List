@@ -1,0 +1,63 @@
+body {
+    background-color: rgb(96, 136, 127);
+}
+
+.title {
+    text-align: center;
+}
+
+.inputText {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.leftSide {
+    display: flex;
+    flex-direction: column;
+}
+
+.rightSide {
+    display: flex;
+    flex-direction: row;
+}
+
+.everything {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 350px;
+}
+
+.list {
+    border: 5px solid maroon;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    margin-left: 40px;
+    margin-top: 10px;
+    width: 360px;
+    padding-bottom: 8px;
+}
+
+.listTitle {
+    display: flex;
+    font-family: "Arial Black", sans-serif;
+    font-size: 20px;
+    justify-content: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.listItems {
+    outline: 0;
+    border: none;
+    background-color: rgb(96, 136, 127);
+    cursor: pointer;
+    font-family: "Arial", sans-serif;
+    font-size: 20px;
+    overflow: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+}
