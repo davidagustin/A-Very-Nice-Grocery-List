@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": "10.3.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "react-dev": "webpack -d --watch",
-    "start": "nodemon server/index.js"
+    "start": "nodemon server/index.js",
   },
   "author": "",
   "license": "ISC",
@@ -27,12 +30,11 @@
     "webpack-cli": "^3.2.3"
   },
   "dependencies": {
-    "10": "0.0.1",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "mysql": "^2.16.0",
-    "node": "^11.12.0",
+    "node": "^10.14.0",
     "nodemon": "^1.18.10",
     "path": "^0.12.7",
     "prop-types": "^15.7.2",
