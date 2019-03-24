@@ -2,7 +2,7 @@
   "name": "fullstackpractice",
   "version": "1.0.0",
   "engines": {
-    "node": "10.x"
+    "node": "10.3.0"
   },
   "description": "",
   "main": "index.js",
@@ -31,6 +31,7 @@
   },
   "dependencies": {
     "express": "^4.16.4",
+    "nodemon": "^1.18.10",
     "path": "^0.12.7",
     "prop-types": "^15.7.2",
     "react": "^16.8.2",
