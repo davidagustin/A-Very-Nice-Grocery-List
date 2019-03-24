@@ -37,9 +37,9 @@ body {
     height: 300px;
     margin-left: 40px;
     margin-top: 10px;
-    width: 360px;
-    padding-bottom: 8px;
     overflow: scroll;
+    padding-bottom: 8px;
+    width: 360px;
 }
 
 .listTitle {
@@ -52,19 +52,19 @@ body {
 }
 
 .listItems {
-    outline: 0;
-    border: none;
     background-color: rgb(96, 136, 127);
+    border: none;
     cursor: pointer;
     font-family: "Arial", sans-serif;
     font-size: 20px;
+    outline: 0;
     padding-left: 5px;
     padding-right: 5px;
 }
 
 .smallText {
-    margin-top: 0;
-    margin-left: 44px;
     color: maroon;
     font-size: 15px;
+    margin-left: 44px;
+    margin-top: 0;
 }
