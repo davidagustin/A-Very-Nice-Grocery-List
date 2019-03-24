@@ -1,15 +1,15 @@
 {
   "name": "fullstackpractice",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "engines": {
     "node": "10.3.0"
   },
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "react-dev": "webpack -d --watch",
-    "start": "nodemon server/index.js",
+    "start": "nodemon server/index.js"
   },
   "author": "",
   "license": "ISC",
