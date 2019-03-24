@@ -1,4 +1,4 @@
-import express from 'express';
-import path from 'path';
+require('express');
+require('path');
 
 express.static(path.join(__dirname, './../client/dist'));
