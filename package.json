@@ -2,8 +2,7 @@
   "name": "fullstackpractice",
   "version": "1.0.0",
   "engines": {
-    "node": "10.3.0",
-    "npm": "6.4.1"
+    "node": "10.x",
   },
   "description": "",
   "main": "index.js",
