@@ -12,6 +12,23 @@ class App extends React.Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  invalidInput() {
+    this.setState({
+      inputBarText: ''
+    });
+  }
+
+  handleClick(e) {
+    const { groceryItems } = this.state;
+    const indexOfDelete = groceryItems.indexOf(e.target.value.trim());
+    const newItemList = groceryItems;
+    newItemList.splice(indexOfDelete, 1);
+    this.setState({
+      groceryItems: newItemList
+    });
   }
 
   handleChange(e) {
@@ -23,12 +40,25 @@ class App extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     const { inputBarText, groceryItems } = this.state;
-    if (inputBarText) {
-      const updatedGroceryItems = [...groceryItems, ...[inputBarText]];
-      this.setState({
-        groceryItems: updatedGroceryItems,
-        inputBarText: ''
-      });
+    const correctedText = inputBarText.replace(/\s+/g, ' ').trim();
+    if (correctedText) {
+      if (groceryItems.includes(correctedText)) {
+        this.invalidInput();
+        return;
+      }
+      const updatedGroceryItems = [...groceryItems, ...[correctedText]];
+      this.setState(
+        {
+          groceryItems: updatedGroceryItems,
+          inputBarText: ''
+        },
+        () => {
+          const scrollToBottom = document.getElementById('formList');
+          scrollToBottom.scrollTop = scrollToBottom.scrollHeight;
+        }
+      );
+    } else {
+      this.invalidInput();
     }
   }
 
@@ -48,7 +78,7 @@ class App extends React.Component {
           </div>
         </div>
         <div className="rightSide">
-          <List inputBarText={inputBarText} groceryItems={groceryItems} />
+          <List groceryItems={groceryItems} handleClick={this.handleClick} />
         </div>
       </div>
     );

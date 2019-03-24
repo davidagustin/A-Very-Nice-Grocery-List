@@ -1,3 +1,4 @@
+/* eslint-env browser */
 import React from 'react';
 
 import PropTypes from 'prop-types';
@@ -8,9 +9,19 @@ const uniqueId = () => {
   return numericalId;
 };
 
-const ListItems = ({ groceryItems }) => {
+const ListItems = ({ groceryItems, handleClick }) => {
   const mappedItems = groceryItems.map(item => {
-    return <input type="button" className="listItems" key={uniqueId()} value={`${item} `} />;
+    const id = uniqueId();
+    return (
+      <input
+        type="button"
+        className="listItems"
+        key={id}
+        value={`${item} `}
+        name="listItem"
+        onClick={handleClick}
+      />
+    );
   });
   return <form>{mappedItems}</form>;
 };
@@ -20,7 +31,8 @@ ListItems.defaultProps = {
 };
 
 ListItems.propTypes = {
-  groceryItems: PropTypes.arrayOf(PropTypes.string)
+  groceryItems: PropTypes.arrayOf(PropTypes.string),
+  handleClick: PropTypes.func.isRequired
 };
 
 export default ListItems;

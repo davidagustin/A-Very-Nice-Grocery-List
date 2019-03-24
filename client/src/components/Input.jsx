@@ -1,10 +1,11 @@
+/* eslint-env browser */
 import React from 'react';
 import PropTypes from 'prop-types';
 
 const Input = ({ inputBarText, handleChange, handleSubmit }) => {
   return (
     <div className="inputText">
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="inputGrocery">
           Add Grocery:
           <br />
