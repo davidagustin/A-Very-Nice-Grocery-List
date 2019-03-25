@@ -13,17 +13,18 @@ const ListItems = ({ groceryItems, handleClick }) => {
   const mappedItems = groceryItems.map(item => {
     const id = uniqueId();
     return (
-      <input
-        type="button"
-        className="listItems"
-        key={id}
-        value={`${item} `}
-        name="listItem"
-        onClick={handleClick}
-      />
+      <li key={id}>
+        <input
+          type="button"
+          className="listItems"
+          value={`${item} `}
+          name="listItem"
+          onClick={handleClick}
+        />
+      </li>
     );
   });
-  return <form>{mappedItems}</form>;
+  return <ul>{mappedItems}</ul>;
 };
 
 ListItems.defaultProps = {
